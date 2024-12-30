@@ -1,0 +1,159 @@
+Running phase: unpackPhase
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking source archive /nix/store/4l9m44js8dl18h24vvf3yqxf8rih9fb9-68nrfk0b8f52knlyp98h4ky9fxrgzl4d-source
+source root is 68nrfk0b8f52knlyp98h4ky9fxrgzl4d-source
+Executing cargoSetupPostUnpackHook
+Finished cargoSetupPostUnpackHook
+Running phase: patchPhase
+@nix { "action": "setPhase", "phase": "patchPhase" }
+Executing cargoSetupPostPatchHook
+Validating consistency between /build/68nrfk0b8f52knlyp98h4ky9fxrgzl4d-source/Cargo.lock and /build/cargo-vendor-dir/Cargo.lock
+Finished cargoSetupPostPatchHook
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+@nix { "action": "setPhase", "phase": "updateAutotoolsGnuConfigScriptsPhase" }
+Running phase: configurePhase
+@nix { "action": "setPhase", "phase": "configurePhase" }
+Running phase: buildPhase
+@nix { "action": "setPhase", "phase": "buildPhase" }
+Executing cargoBuildHook
+cargoBuildHook flags: -j 12 --target x86_64-unknown-linux-gnu --offline --profile release
+[1m[32m   Compiling[0m serde v1.0.217
+[1m[32m   Compiling[0m pkg-config v0.3.31
+[1m[32m   Compiling[0m hashbrown v0.15.2
+[1m[32m   Compiling[0m equivalent v1.0.1
+[1m[32m   Compiling[0m winnow v0.6.20
+[1m[32m   Compiling[0m target-lexicon v0.12.16
+[1m[32m   Compiling[0m smallvec v1.13.2
+[1m[32m   Compiling[0m heck v0.5.0
+[1m[32m   Compiling[0m version-compare v0.2.0
+[1m[32m   Compiling[0m proc-macro2 v1.0.92
+[1m[32m   Compiling[0m unicode-ident v1.0.14
+[1m[32m   Compiling[0m libc v0.2.169
+[1m[32m   Compiling[0m autocfg v1.4.0
+[1m[32m   Compiling[0m bitflags v2.6.0
+[1m[32m   Compiling[0m futures-core v0.3.31
+[1m[32m   Compiling[0m pin-utils v0.1.0
+[1m[32m   Compiling[0m futures-task v0.3.31
+[1m[32m   Compiling[0m pin-project-lite v0.2.15
+[1m[32m   Compiling[0m futures-channel v0.3.31
+[1m[32m   Compiling[0m memchr v2.7.4
+[1m[32m   Compiling[0m gio v0.20.7
+[1m[32m   Compiling[0m slab v0.4.9
+[1m[32m   Compiling[0m semver v1.0.24
+[1m[32m   Compiling[0m cfg-if v1.0.0
+[1m[32m   Compiling[0m futures-io v0.3.31
+[1m[32m   Compiling[0m shlex v1.3.0
+[1m[32m   Compiling[0m indexmap v2.7.0
+[1m[32m   Compiling[0m rustix v0.38.42
+[1m[32m   Compiling[0m cc v1.2.6
+[1m[32m   Compiling[0m wayland-sys v0.31.5
+[1m[32m   Compiling[0m cfg-expr v0.17.2
+[1m[32m   Compiling[0m quote v1.0.38
+[1m[32m   Compiling[0m libloading v0.8.6
+[1m[32m   Compiling[0m syn v2.0.93
+[1m[32m   Compiling[0m linux-raw-sys v0.4.14
+[1m[32m   Compiling[0m dlib v0.5.2
+[1m[32m   Compiling[0m rustc_version v0.4.1
+[1m[32m   Compiling[0m memoffset v0.9.1
+[1m[32m   Compiling[0m log v0.4.22
+[1m[32m   Compiling[0m downcast-rs v1.2.1
+[1m[32m   Compiling[0m scoped-tls v1.0.1
+[1m[32m   Compiling[0m wayland-client v0.31.7
+[1m[32m   Compiling[0m fastrand v2.3.0
+[1m[32m   Compiling[0m field-offset v0.3.6
+[1m[32m   Compiling[0m once_cell v1.20.2
+[1m[32m   Compiling[0m quick-xml v0.36.2
+[1m[32m   Compiling[0m wayland-backend v0.3.7
+[1m[32m   Compiling[0m wayland-scanner v0.31.5
+[1m[32m   Compiling[0m serde_spanned v0.6.8
+[1m[32m   Compiling[0m toml_datetime v0.6.8
+[1m[32m   Compiling[0m toml_edit v0.22.22
+[1m[32m   Compiling[0m futures-macro v0.3.31
+[1m[32m   Compiling[0m serde_derive v1.0.217
+[1m[32m   Compiling[0m futures-util v0.3.31
+[1m[32m   Compiling[0m toml v0.8.19
+[1m[32m   Compiling[0m proc-macro-crate v3.2.0
+[1m[32m   Compiling[0m system-deps v7.0.3
+[1m[32m   Compiling[0m glib-macros v0.20.7
+[1m[32m   Compiling[0m gtk4-macros v0.9.5
+[1m[32m   Compiling[0m glib-sys v0.20.7
+[1m[32m   Compiling[0m gobject-sys v0.20.7
+[1m[32m   Compiling[0m gio-sys v0.20.8
+[1m[32m   Compiling[0m pango-sys v0.20.7
+[1m[32m   Compiling[0m cairo-sys-rs v0.20.7
+[1m[32m   Compiling[0m gdk-pixbuf-sys v0.20.7
+[1m[32m   Compiling[0m graphene-sys v0.20.7
+[1m[32m   Compiling[0m gdk4-sys v0.9.5
+[1m[32m   Compiling[0m gsk4-sys v0.9.5
+[1m[32m   Compiling[0m gtk4-sys v0.9.5
+[1m[32m   Compiling[0m tempfile v3.14.0
+[1m[32m   Compiling[0m futures-executor v0.3.31
+[1m[31merror[0m[1m:[0m failed to run custom build command for `gdk4-sys v0.9.5`
+
+Caused by:
+  process didn't exit successfully: `/build/68nrfk0b8f52knlyp98h4ky9fxrgzl4d-source/target/release/build/gdk4-sys-11e818c1bba3ab05/build-script-build` (exit status: 1)
+  --- stdout
+  cargo:rerun-if-changed=/build/cargo-vendor-dir/gdk4-sys-0.9.5/Cargo.toml
+  cargo:rerun-if-env-changed=GTK4_NO_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-unknown-linux-gnu
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_unknown_linux_gnu
+  cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+  cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+
+  --- stderr
+
+  pkg-config exited with status code 1
+  > PKG_CONFIG_PATH=/nix/store/yan7xnjlp3l7pg82qz46b7z7x9za4flf-wayland-1.23.1-dev/lib/pkgconfig:/nix/store/nqw2587xv32fcdsl39c3a83a1mchkv1j-gtk4-4.16.3-dev/lib/pkgconfig:/nix/store/l0np4qv5260igzj1z5cz4j936i29bn1j-cairo-1.18.2-dev/lib/pkgconfig:/nix/store/x6wh1a1xnyzvh4k0x6ggdr8w9w38zl52-fontconfig-2.15.0-dev/lib/pkgconfig:/nix/store/wc97xp20zf23vx6rj65ah6knqpqwn9bn-freetype-2.13.3-dev/lib/pkgconfig:/nix/store/1lggwqzapn5mn49l9zy4h566ysv9kzdb-zlib-1.3.1-dev/lib/pkgconfig:/nix/store/8b6a13p92vfxl4v4wjjj2aznknzac35z-bzip2-1.0.8-dev/lib/pkgconfig:/nix/store/kp75hjgjw7mas6irhf4dqpdlkhqhzix4-brotli-1.1.0-dev/lib/pkgconfig:/nix/store/j0cx534qlwqdinajjm4f7l3c2460785l-libpng-apng-1.6.43-dev/lib/pkgconfig:/nix/store/5z7yxa99nghyvjrqspzlimgfsydc2an7-pixman-0.44.2/lib/pkgconfig:/nix/store/hydpb5y96v36460hwj66xckxp64qdwcd-libXext-1.3.6-dev/lib/pkgconfig:/nix/store/h6xil473xysi4lp6xr3mnwcfdd9nsr1b-xorgproto-2024.1/share/pkgconfig:/nix/store/s0q07j6sqwif67pq2yjazqgc74mwyi54-libXau-1.0.11-dev/lib/pkgconfig:/nix/store/7h0bwad5052ghkhnbax91jzc0gc1i03j-libXrender-0.9.11-dev/lib/pkgconfig:/nix/store/2p1gkzwz2lq6vv67579vh4bllw1psqk8-libX11-1.8.10-dev/lib/pkgconfig:/nix/store/dip0xkz4xdlvxc3r70hkv5x8780pq0gr-libxcb-1.17.0-dev/lib/pkgconfig:/nix/store/y8fxzs8srzd6d74a85zbpssjr8wkj9q4-glib-2.82.1-dev/lib/pkgconfig:/nix/store/w661s7ai2rbh411r3w94fbfp802xnz8y-libffi-3.4.6-dev/lib/pkgconfig:/nix/store/v5flgachjhgvsxqxqi8hnpi19cnbgfwc-gdk-pixbuf-2.42.12-dev/lib/pkgconfig:/nix/store/yv9s42q6q88s75arhbqp6i7ixcyb7rpn-libtiff-4.7.0-dev/lib/pkgconfig:/nix/store/03vb8v0mmr98b2rh11klsyd5xhmk0wd2-libdeflate-1.22/lib/pkgconfig:/nix/store/6sxnhzr0i1r6bysqm4p9smvq4gjj2s60-libjpeg-turbo-3.0.4-dev/lib/pkgconfig:/nix/store/mmah8dm69x4rj9zhpf0nawrlr6wwnmpp-libwebp-1.4.0/lib/pkgconfig:/nix/store/26153nk3n2qm4ql1dkldzxcyb46r11as-xz-5.6.3-dev/lib/pkgconfig:/nix/store/v4wsjzlrhzxra6dlzzwcpd6br55z10fd-zstd-1.5.6-dev/lib/pkgconfig:/nix/store/6sqln98iya9ffaj6plbm4p5s343mbfj5-graphene-1.10.8-dev/lib/pkgconfig:/nix/store/akxwqfa5h9n4giv2zp04m3v4ngabb18j-pango-1.54.0-dev/lib/pkgconfig:/nix/store/9w2ars9rx8k0y48pq9fbmqxypmmfga3q-harfbuzz-10.1.0-dev/lib/pkgconfig:/nix/store/7ikw1adxlhvgx7gr79lgsza11j4nj12n-graphite2-1.3.14-dev/lib/pkgconfig:/nix/store/s870yfwqbx8ddnkh1ak40p5an906g7ck-libXft-2.3.8-dev/lib/pkgconfig:/nix/store/1sy8x20x8s2m82ajhrkkvxv9d00qsppx-vulkan-loader-1.3.296.0-dev/lib/pkgconfig:/nix/store/l8x0x87qb2y5j71ff42nbnsqd6jpgdz8-gsettings-desktop-schemas-47.1/share/pkgconfig:/nix/store/rz265n1pjsk85pv5g2x75qg9cvc32k05-gobject-introspection-wrapped-1.82.0-dev/lib/pkgconfig PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags gtk4 gtk4 >= 4.17
+
+  The system library `gtk4` required by crate `gdk4-sys` was not found.
+  The file `gtk4.pc` needs to be installed and the PKG_CONFIG_PATH environment variable must contain its parent directory.
+  PKG_CONFIG_PATH contains the following:
+      - /nix/store/yan7xnjlp3l7pg82qz46b7z7x9za4flf-wayland-1.23.1-dev/lib/pkgconfig
+      - /nix/store/nqw2587xv32fcdsl39c3a83a1mchkv1j-gtk4-4.16.3-dev/lib/pkgconfig
+      - /nix/store/l0np4qv5260igzj1z5cz4j936i29bn1j-cairo-1.18.2-dev/lib/pkgconfig
+      - /nix/store/x6wh1a1xnyzvh4k0x6ggdr8w9w38zl52-fontconfig-2.15.0-dev/lib/pkgconfig
+      - /nix/store/wc97xp20zf23vx6rj65ah6knqpqwn9bn-freetype-2.13.3-dev/lib/pkgconfig
+      - /nix/store/1lggwqzapn5mn49l9zy4h566ysv9kzdb-zlib-1.3.1-dev/lib/pkgconfig
+      - /nix/store/8b6a13p92vfxl4v4wjjj2aznknzac35z-bzip2-1.0.8-dev/lib/pkgconfig
+      - /nix/store/kp75hjgjw7mas6irhf4dqpdlkhqhzix4-brotli-1.1.0-dev/lib/pkgconfig
+      - /nix/store/j0cx534qlwqdinajjm4f7l3c2460785l-libpng-apng-1.6.43-dev/lib/pkgconfig
+      - /nix/store/5z7yxa99nghyvjrqspzlimgfsydc2an7-pixman-0.44.2/lib/pkgconfig
+      - /nix/store/hydpb5y96v36460hwj66xckxp64qdwcd-libXext-1.3.6-dev/lib/pkgconfig
+      - /nix/store/h6xil473xysi4lp6xr3mnwcfdd9nsr1b-xorgproto-2024.1/share/pkgconfig
+      - /nix/store/s0q07j6sqwif67pq2yjazqgc74mwyi54-libXau-1.0.11-dev/lib/pkgconfig
+      - /nix/store/7h0bwad5052ghkhnbax91jzc0gc1i03j-libXrender-0.9.11-dev/lib/pkgconfig
+      - /nix/store/2p1gkzwz2lq6vv67579vh4bllw1psqk8-libX11-1.8.10-dev/lib/pkgconfig
+      - /nix/store/dip0xkz4xdlvxc3r70hkv5x8780pq0gr-libxcb-1.17.0-dev/lib/pkgconfig
+      - /nix/store/y8fxzs8srzd6d74a85zbpssjr8wkj9q4-glib-2.82.1-dev/lib/pkgconfig
+      - /nix/store/w661s7ai2rbh411r3w94fbfp802xnz8y-libffi-3.4.6-dev/lib/pkgconfig
+      - /nix/store/v5flgachjhgvsxqxqi8hnpi19cnbgfwc-gdk-pixbuf-2.42.12-dev/lib/pkgconfig
+      - /nix/store/yv9s42q6q88s75arhbqp6i7ixcyb7rpn-libtiff-4.7.0-dev/lib/pkgconfig
+      - /nix/store/03vb8v0mmr98b2rh11klsyd5xhmk0wd2-libdeflate-1.22/lib/pkgconfig
+      - /nix/store/6sxnhzr0i1r6bysqm4p9smvq4gjj2s60-libjpeg-turbo-3.0.4-dev/lib/pkgconfig
+      - /nix/store/mmah8dm69x4rj9zhpf0nawrlr6wwnmpp-libwebp-1.4.0/lib/pkgconfig
+      - /nix/store/26153nk3n2qm4ql1dkldzxcyb46r11as-xz-5.6.3-dev/lib/pkgconfig
+      - /nix/store/v4wsjzlrhzxra6dlzzwcpd6br55z10fd-zstd-1.5.6-dev/lib/pkgconfig
+      - /nix/store/6sqln98iya9ffaj6plbm4p5s343mbfj5-graphene-1.10.8-dev/lib/pkgconfig
+      - /nix/store/akxwqfa5h9n4giv2zp04m3v4ngabb18j-pango-1.54.0-dev/lib/pkgconfig
+      - /nix/store/9w2ars9rx8k0y48pq9fbmqxypmmfga3q-harfbuzz-10.1.0-dev/lib/pkgconfig
+      - /nix/store/7ikw1adxlhvgx7gr79lgsza11j4nj12n-graphite2-1.3.14-dev/lib/pkgconfig
+      - /nix/store/s870yfwqbx8ddnkh1ak40p5an906g7ck-libXft-2.3.8-dev/lib/pkgconfig
+      - /nix/store/1sy8x20x8s2m82ajhrkkvxv9d00qsppx-vulkan-loader-1.3.296.0-dev/lib/pkgconfig
+      - /nix/store/l8x0x87qb2y5j71ff42nbnsqd6jpgdz8-gsettings-desktop-schemas-47.1/share/pkgconfig
+      - /nix/store/rz265n1pjsk85pv5g2x75qg9cvc32k05-gobject-introspection-wrapped-1.82.0-dev/lib/pkgconfig
+
+  HINT: you may need to install a package such as gtk4, gtk4-dev or gtk4-devel.
+
+[1m[33mwarning[0m[1m:[0m build failed, waiting for other jobs to finish...
