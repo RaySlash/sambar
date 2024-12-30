@@ -1,0 +1,8 @@
+[package]
+name = "sambar"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+iced = "0.13.1"
+serde = { version = "1.0.217", features = ["derive"] }
