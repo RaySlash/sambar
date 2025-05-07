@@ -1,9 +1,8 @@
 {
+  description = "Wayland Bar - sambar";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    nci.url = "github:yusdacra/nix-cargo-integration";
-    devshell.url = "github:numtide/devshell";
     fenix = {
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,57 +11,61 @@
 
   outputs = inputs @ {flake-parts, ...}:
     flake-parts.lib.mkFlake {inherit inputs;} {
-      imports = [
-        inputs.devshell.flakeModule
-        inputs.nci.flakeModule
+      systems = [
+        "aarch64-darwin"
+        "aarch64-linux"
+        "riscv64-linux"
+        "x86_64-darwin"
+        "x86_64-linux"
       ];
-      systems = inputs.nixpkgs.lib.systems.flakeExposed;
+
       perSystem = {
-        config,
         system,
         pkgs,
         ...
       }: let
-        rust-toolchain = inputs.fenix.packages.${system}.stable.toolchain;
-
+        rust-toolchain = pkgs.fenix.stable.withComponents [
+          "cargo"
+          "clippy"
+          "rust-src"
+          "rust-analyzer"
+          "rustc"
+          "rustfmt"
+        ];
         buildStepDeps = with pkgs; [
-          wayland
-          gtk4
           pkg-config
-          gobject-introspection
-          glib
+          openssl
+          wayland
         ];
       in {
+        _module.args.pkgs = import inputs.nixpkgs {
+          inherit system;
+          overlays = [inputs.fenix.overlays.default];
+        };
         packages.default =
           (pkgs.makeRustPlatform {
             cargo = rust-toolchain;
             rustc = rust-toolchain;
           })
           .buildRustPackage {
-            pname = "app";
-            version = "0.1.0";
+            pname = "sambar";
+            version = "0.0.1";
             src = ./.;
             cargoLock.lockFile = ./Cargo.lock;
+            useFetchCargoVendor = true;
 
             buildInputs = buildStepDeps;
-            nativeBuildInputs = with pkgs; [
-              pkg-config
-              openssl
-            ];
+            nativeBuildInputs = buildStepDeps;
           };
-        devshells.default = {
-          env = [
-          ];
-          commands = [
-            {
-              help = "alias of `cargo build`";
-              name = "build";
-              command = "cargo run";
-            }
-          ];
-          packages = [
-            rust-toolchain
-          ];
+        devShells.default = pkgs.mkShell {
+          shellHook = ''
+            export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath buildStepDeps}"
+          '';
+          packages =
+            [
+              rust-toolchain
+            ]
+            ++ buildStepDeps;
         };
       };
     };
